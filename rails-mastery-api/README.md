@@ -1,5 +1,8 @@
-FEATURES LIST
+## Running / Development
 
-* Nested resources
-* Shallow resources
-  "Rule of thumb for good Rails design: resources should never be nested more than 1 level deep". See http://guides.rubyonrails.org/routing.html#nested-resources
+* `rails s`
+* Visit at [http://localhost:3000](http://localhost:3000).
+
+### Running Tests
+
+* `rspec`
