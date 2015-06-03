@@ -1,0 +1,5 @@
+grammar Model
+  rule hello
+    'class'
+  end
+end
