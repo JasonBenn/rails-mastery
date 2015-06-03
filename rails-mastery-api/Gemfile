@@ -5,6 +5,7 @@ gem 'rails', '4.2.1'
 gem 'rails-api'
 gem 'mysql2'
 gem 'bcrypt', '~> 3.1.7'
+gem 'active_model_serializers'
 
 gem 'octokit'
 gem 'faraday-http-cache'
