@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  color: #333;
+  background: white;
+  margin: 80px auto;
+  width: 100%;
+  display: block;
+}
+
+nav {
+  height: 3em;
+}
+
+table {
+  width: 100%;  
+}
+

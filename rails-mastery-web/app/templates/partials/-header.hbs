@@ -1,0 +1,12 @@
+<nav>
+  {{link-to 'Features' 'index' class='main'}}
+
+  <input type="text" id="bmenu" class="burgercheck" type="checkbox">
+  <label for="bmenu" class="burgermenu"></label>
+
+  <div class="menu">
+    {{link-to "Dashboard" "index" class="icon-gauge"}}
+    {{link-to "Features" "features" class="icon-users-1"}}
+    {{link-to "New Feature" "features.new" class="icon-user-add"}}
+  </div>
+</nav>

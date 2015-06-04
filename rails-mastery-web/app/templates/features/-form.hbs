@@ -1,25 +1,9 @@
 <form {{action "save" on="submit"}}>
   <h2>{{errorMessage}}</h2>
-  <p>
-    <label>
-      Text:
-      {{input value = model.text}}
-    </label>
-  </p>
-  <p>
-    <label>
-      Description
-      {{input value = model.description}}
-    </label>
-  </p>
-  <input type="submit" value="Save">
-  <button {{action "cancel"}}>Cancel</button>
+  <fieldset>
+    {{input value=model.text placeholder="Name"}}<br>
+    {{input value=model.description placeholder="Description"}}
+    <input type="submit" value="Save" class="primary">
+    <button {{action "cancel"}}>Cancel</button>  
+  </fieldset>
 </form>
-
-<div>
-  <h2>Preview</h2>
-  <p>{{model.text}}</p>
-  <p>{{model.description}}</p>
-</div>
-
-{{#link-to 'features'}}Back{{/link-to}}

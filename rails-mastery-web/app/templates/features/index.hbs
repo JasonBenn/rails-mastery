@@ -1,14 +1,24 @@
-<h1>Features index</h1>
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
 
-<p>Total features: {{model.length}}</p>
-<ul>
-  {{#each feature in model}}
-    <li>
-      <strong>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</strong> {{feature.truncatedDescription}}
-      <em>{{#link-to 'features.edit' feature}}edit{{/link-to}}</em>
-      <button {{action 'delete' feature}}>delete</button>
-    </li>
-  {{/each}}
-</ul>
-
-{{#link-to 'features.new'}}New feature{{/link-to}}
+    {{#each feature in model}}
+      <tr>
+        <td>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</td>
+        <td>{{feature.truncatedDescription}}</td>
+        <td><a href="#" {{action 'delete' feature}}>delete</a></td>
+      </tr>
+    {{/each}}
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

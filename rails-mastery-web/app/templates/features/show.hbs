@@ -1,17 +1,27 @@
-<h2>{{model.currentFeature.text}}</h2>
-<p>{{model.currentFeature.description}}</p>
-
-<p>Here are a list of example repos that have completed this feature...</p>
+<div class="feature-profile">
+  <p>{{model.currentFeature.text}}</p>
+  <p>{{model.currentFeature.description}}</p>
+  <p>{{link-to "Edit" "features.edit" model.currentFeature}}</p>
+  <p><a href="#" {{action "delete" model.currentFeature}}>delete</a></p>
+</div>
 
 <ul>
-  <li>asdfasdf, line 58</li>
-  <li>asdfasdf, line 58</li>
-  <li>asdfasdf, line 58</li>
-  <li>asdfasdf, line 58</li>
-  <li>asdfasdf, line 58</li>
-</ul>
+  {{#if model.previousFeature}}
+    <li>
+      {{#link-to 'features.show' model.previousFeature.id }}
+        Previous: {{model.previousFeature.text}}
+      {{/link-to}}
+    </li>
+  {{/if}}
+  {{#if model.nextFeature}}
+    <li>
+      {{#link-to 'features.show' model.nextFeature.id }}
+        Next: {{model.nextFeature.text}}
+      {{/link-to}}
+    </li>
+  {{/if}}
 
-<p>{{#link-to 'features.edit' model.currentFeature.id}}edit{{/link-to}}</p>
-{{#if model.previousFeature}}<p>{{#link-to 'features.show' model.previousFeature.id }}Previous: {{model.previousFeature.text}}{{/link-to}}</p>{{/if}}
-{{#if model.nextFeature}}<p>{{#link-to 'features.show' model.nextFeature.id }}Next: {{model.nextFeature.text}}{{/link-to}}</p>{{/if}}
-{{#link-to 'features'}}Back{{/link-to}}
+  <li>
+    {{#link-to 'features'}}Back{{/link-to}}
+  </li>
+</ul>
