@@ -1,27 +1,32 @@
 <div class="feature-profile">
-  <p>{{model.currentFeature.text}}</p>
-  <p>{{model.currentFeature.description}}</p>
-  <p>{{link-to "Edit" "features.edit" model.currentFeature.id}}</p>
-  <p><a href="#" {{action "delete" model.currentFeature.content}}>delete</a></p>
+  <p><strong>Feature:</strong> {{model.currentFeature.text}}</p>
+  <p><strong>Description:</strong> {{model.currentFeature.description}}</p>
+  <p>{{link-to "Edit" "features.edit" model.currentFeature.id}} &mdash; <a href="#" {{action "delete" model.currentFeature.content}}>Delete</a></p>
 </div>
 
-<ul>
+<ul class="inline">
   {{#if model.previousFeature}}
     <li>
-      {{#link-to 'features.show' model.previousFeature.id }}
+      {{#link-to 'requirements' model.previousFeature.id }}
         Previous: {{model.previousFeature.text}}
       {{/link-to}}
     </li>
   {{/if}}
   {{#if model.nextFeature}}
     <li>
-      {{#link-to 'features.show' model.nextFeature.id }}
+      {{#link-to 'requirements' model.nextFeature.id }}
         Next: {{model.nextFeature.text}}
       {{/link-to}}
     </li>
   {{/if}}
 
+
   <li>
     {{#link-to 'features'}}Back{{/link-to}}
   </li>
 </ul>
+
+<div class="requirements-container">
+  {{outlet}}
+</div>
+

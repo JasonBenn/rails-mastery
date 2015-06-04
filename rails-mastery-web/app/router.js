@@ -9,10 +9,11 @@ Router.map(function() {
   this.resource('features');
   this.route('features', function() {
     this.route('new');
-    this.route('show', { path: ':feature_id' });
+    this.route('show', { path: ':feature_id' }, function() {
+      this.resource('requirements', function() {});
+    });
     this.route('edit', { path: ':feature_id/edit' });
   });
-  this.route('requirements');
 });
 
 export default Router;

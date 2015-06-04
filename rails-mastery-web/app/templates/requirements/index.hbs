@@ -1,0 +1,20 @@
+{{#if model}}
+  <h2>Requirements</h2>
+
+  <table class="primary">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each requirement in model}}
+        <tr>
+          <td>{{requirement.text}}</td>
+          <td></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{/if}}
