@@ -10,7 +10,7 @@
 
     {{#each feature in model}}
       <tr>
-        <td>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</td>
+        <td>{{#link-to 'features.show' feature.id}}{{feature.text}}{{/link-to}}</td>
         <td>{{feature.truncatedDescription}}</td>
         <td><a href="#" {{action 'delete' feature}}>delete</a></td>
       </tr>

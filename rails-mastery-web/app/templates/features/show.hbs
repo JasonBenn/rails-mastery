@@ -1,8 +1,8 @@
 <div class="feature-profile">
   <p>{{model.currentFeature.text}}</p>
   <p>{{model.currentFeature.description}}</p>
-  <p>{{link-to "Edit" "features.edit" model.currentFeature}}</p>
-  <p><a href="#" {{action "delete" model.currentFeature}}>delete</a></p>
+  <p>{{link-to "Edit" "features.edit" model.currentFeature.id}}</p>
+  <p><a href="#" {{action "delete" model.currentFeature.content}}>delete</a></p>
 </div>
 
 <ul>
