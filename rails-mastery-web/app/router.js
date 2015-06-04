@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('features');
   this.route('features', function() {
     this.route('new');
+    this.route('show', { path: ':feature_id' });
   });
 });
 

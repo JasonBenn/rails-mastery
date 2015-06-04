@@ -1,0 +1,16 @@
+<h2>{{model.currentFeature.text}}</h2>
+<p>{{model.currentFeature.description}}</p>
+
+<p>Here are a list of example repos that have completed this feature...</p>
+
+<ul>
+  <li>asdfasdf, line 58</li>
+  <li>asdfasdf, line 58</li>
+  <li>asdfasdf, line 58</li>
+  <li>asdfasdf, line 58</li>
+  <li>asdfasdf, line 58</li>
+</ul>
+
+{{#if model.previousFeature}}<p>{{#link-to 'features.show' model.previousFeature.id }}Previous: {{model.previousFeature.text}}{{/link-to}}</p>{{/if}}
+{{#if model.nextFeature}}<p>{{#link-to 'features.show' model.nextFeature.id }}Next: {{model.nextFeature.text}}{{/link-to}}</p>{{/if}}
+{{#link-to 'features'}}Back{{/link-to}}

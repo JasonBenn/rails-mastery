@@ -4,8 +4,9 @@
 <ul>
   {{#each feature in model}}
     <li>
-      <p>{{feature.text}}</p>
-      <p>{{feature.description}}</p>
+      <strong>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</strong> {{feature.truncatedDescription}}
     </li>
   {{/each}}
 </ul>
+
+{{#link-to 'features.new'}}New feature{{/link-to}}

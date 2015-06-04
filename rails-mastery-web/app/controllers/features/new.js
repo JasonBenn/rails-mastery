@@ -9,19 +9,17 @@ export default Ember.Controller.extend({
     save: function() {
       if (this.get('isValid')) {
         this.get('model').save().then(function(feature) {
-          this.transitionToRoute('feature.show', feature)
+          this.transitionToRoute('features.show', feature)
         }.bind(this))
       } else {
         this.set('errorMessage', 'You have to fill in all fields')
       }
-      console.log('save in controller!')
       return false;
     },
 
     cancel: function() {
-      debugger
-      console.log('cancel in controller')
-      return true;
+      this.transitionToRoute('features')
+      return false;
     }
   }
 });
