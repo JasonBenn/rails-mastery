@@ -8,6 +8,6 @@ export default Ember.Route.extend({
       currentFeature: this.store.find('feature', currentId),
       previousFeature: this.store.find('feature', currentId - 1),
       nextFeature: this.store.find('feature', currentId + 1)
-    }
+    };
   }
 });

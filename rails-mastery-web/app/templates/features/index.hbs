@@ -6,7 +6,7 @@
     <li>
       <strong>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</strong> {{feature.truncatedDescription}}
       <em>{{#link-to 'features.edit' feature}}edit{{/link-to}}</em>
-      {{!-- <em>{{#link-to 'features.edit' feature}}delete{{/link-to}}</em> --}}
+      <button {{action 'delete' feature}}>delete</button>
     </li>
   {{/each}}
 </ul>

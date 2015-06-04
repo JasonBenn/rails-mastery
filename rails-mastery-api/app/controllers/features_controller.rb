@@ -28,11 +28,16 @@ class FeaturesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @feature = Feature.find(params[:id])
-  #   @feature.destroy
-  #   head :ok
-  # end
+  def destroy
+    @feature = Feature.find(params[:id])
+
+    begin
+      @feature.destroy
+    rescue ActiveRecord::StatementInvalid => e
+      render json: { message: e.message }, status: :not_acceptable and return
+    end
+    head :ok
+  end
 
   private
 
