@@ -18,6 +18,22 @@ class FeaturesController < ApplicationController
     end
   end
 
+  def update
+    @feature = Feature.find(params[:id])
+
+    if @feature.update(feature_params)
+      render json: @feature
+    else
+      render json: @feature.errors
+    end
+  end
+
+  # def destroy
+  #   @feature = Feature.find(params[:id])
+  #   @feature.destroy
+  #   head :ok
+  # end
+
   private
 
   def feature_params 

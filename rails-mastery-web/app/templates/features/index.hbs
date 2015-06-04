@@ -5,6 +5,8 @@
   {{#each feature in model}}
     <li>
       <strong>{{#link-to 'features.show' feature}}{{feature.text}}{{/link-to}}</strong> {{feature.truncatedDescription}}
+      <em>{{#link-to 'features.edit' feature}}edit{{/link-to}}</em>
+      {{!-- <em>{{#link-to 'features.edit' feature}}delete{{/link-to}}</em> --}}
     </li>
   {{/each}}
 </ul>

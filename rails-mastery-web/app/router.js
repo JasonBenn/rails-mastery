@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('features', function() {
     this.route('new');
     this.route('show', { path: ':feature_id' });
+    this.route('edit', { path: ':feature_id/edit' });
   });
 });
 
