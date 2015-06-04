@@ -8,4 +8,19 @@ class FeaturesController < ApplicationController
     @feature = Feature.find(params[:id])
     render json: @feature
   end
+
+  def create
+    @feature = Feature.new(feature_params)
+    if @feature.save
+      render json: @feature
+    else
+      render json: @feature.errors
+    end
+  end
+
+  private
+
+  def feature_params 
+    params.require(:feature).permit(:text, :description)
+  end
 end

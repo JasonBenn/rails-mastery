@@ -1,4 +1,5 @@
 <form {{action "save" on="submit"}}>
+  <h2>{{errorMessage}}</h2>
   <p>
     <label>
       Text:
@@ -14,3 +15,9 @@
   <input type="submit" value="Save">
   <button {{action "cancel"}}>Cancel</button>
 </form>
+
+<div>
+  <h2>Preview</h2>
+  <p>{{model.text}}</p>
+  <p>{{model.description}}</p>
+</div>
