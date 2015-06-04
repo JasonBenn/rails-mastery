@@ -7,8 +7,8 @@ class FeaturesController < ApplicationController
   end
 
   def index
-    @features = Feature.all
-    render json: @features
+    @features = Feature.includes :requirements
+    @requirements = @features.flat_map &:requirements
   end
 
   def show
