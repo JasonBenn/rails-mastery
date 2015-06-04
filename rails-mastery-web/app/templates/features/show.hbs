@@ -11,6 +11,7 @@
   <li>asdfasdf, line 58</li>
 </ul>
 
+<p>{{#link-to 'features.edit' model.currentFeature.id}}edit{{/link-to}}</p>
 {{#if model.previousFeature}}<p>{{#link-to 'features.show' model.previousFeature.id }}Previous: {{model.previousFeature.text}}{{/link-to}}</p>{{/if}}
 {{#if model.nextFeature}}<p>{{#link-to 'features.show' model.nextFeature.id }}Next: {{model.nextFeature.text}}{{/link-to}}</p>{{/if}}
 {{#link-to 'features'}}Back{{/link-to}}
