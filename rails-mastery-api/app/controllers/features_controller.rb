@@ -13,15 +13,15 @@ class FeaturesController < ApplicationController
 
   def show
     @feature = Feature.find(params[:id])
-    render json: @feature
+    @requirements = @feature.requirements
   end
 
   def create
     @feature = Feature.new(feature_params)
     if @feature.save
-      render json: @feature
+      render :show
     else
-      render json: @feature.errors
+      render :error
     end
   end
 
@@ -29,9 +29,9 @@ class FeaturesController < ApplicationController
     @feature = Feature.find(params[:id])
 
     if @feature.update(feature_params)
-      render json: @feature
+      render :show
     else
-      render json: @feature.errors
+      render :error
     end
   end
 

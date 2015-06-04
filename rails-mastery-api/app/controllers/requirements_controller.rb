@@ -1,6 +1,7 @@
 class RequirementsController < ApplicationController
   before_filter :determine_scope
 
+  # TODO: convert to jbuilder.
   def index
     @requirements = @scope.all
     render json: @requirements
