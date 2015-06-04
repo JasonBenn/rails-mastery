@@ -7,13 +7,12 @@ export default Ember.Route.extend({
 
   actions: {
     delete: function(feature) {
-      feature.destroyRecord().then(function(response) {
-        console.log('response', response)
-        this.transitionToRoute('features');
-      }, function(error) {
-        console.log(error)
-        console.log('errors! still getting hit even with 200 OK')
-      });
+      feature.destroyRecord().then(function() {
+        console.log('success callback!', arguments)
+      }.bind(this), function() {
+        feature.rollback();
+        console.log('error callback!', arguments)
+      }.bind(this));
       return false;
     }
   }

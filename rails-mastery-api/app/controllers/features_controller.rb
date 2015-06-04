@@ -1,4 +1,11 @@
 class FeaturesController < ApplicationController
+  rescue_from ActiveRecord::StatementInvalid do |exception|
+    # this message isn't appropriate. create an error with a default to_s and return that instead.
+    # how do you make errors helpful?
+    # TODO.
+    render json: { message: "Error: cannot process request" }, status: :unprocessable_entity
+  end
+
   def index
     @features = Feature.all
     render json: @features
@@ -29,14 +36,8 @@ class FeaturesController < ApplicationController
   end
 
   def destroy
-    @feature = Feature.find(params[:id])
-
-    begin
-      @feature.destroy
-    rescue ActiveRecord::StatementInvalid => e
-      render json: { message: e.message }, status: :not_acceptable and return
-    end
-    head :ok
+    Feature.find(params[:id]).destroy
+    head :no_content
   end
 
   private

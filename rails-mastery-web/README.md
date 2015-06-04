@@ -32,5 +32,6 @@ You will need the following things properly installed on your computer.
 ## Bugs/ares of inquiry
 
 * How do I best respond to server errors?
-  * Errors should follow the same format, should have high-level handling logic, an opportunity to be captured at any level of stack
-  * Should be based on response codes, not JSON.
+  * Destroy requests should be responded with either 204 (no_content) or 422 (unprocessable_entity). Not 200, though? Wtf?
+  * There should be an appropriate error event bubbling up, so an opportunity to handle that at any level. Hopefully this exists. Go through the book.
+  * Ideally, I'd handle the delete error at features/index route. How/where do I change state so that it goes away when dismissed? Sounds like it needs a component, an action to dismiss, etc.

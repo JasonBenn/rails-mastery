@@ -8,8 +8,8 @@ export default Ember.Controller.extend({
   actions: {
     save: function() {
       if (this.get('isValid')) {
-        this.get('model').save().then(function(feature) {
-          this.transitionToRoute('features.show', feature.id);
+        this.get('model').save().then(function() {
+          this.transitionToRoute('features');
         }.bind(this));
       } else {
         this.set('errorMessage', 'You have to fill in all fields');
