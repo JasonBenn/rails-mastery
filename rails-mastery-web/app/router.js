@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('show', { path: ':feature_id' });
     this.route('edit', { path: ':feature_id/edit' });
   });
+  this.route('requirements');
 });
 
 export default Router;
