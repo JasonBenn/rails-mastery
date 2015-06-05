@@ -5,4 +5,4 @@ json.feature do
   json.requirement_ids @feature.requirements.map &:id
 end
 
-json.requirements @requirements, :id, :text
+json.requirements @feature.requirements, :id, :text

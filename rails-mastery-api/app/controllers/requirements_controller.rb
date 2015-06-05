@@ -4,13 +4,20 @@ class RequirementsController < ApplicationController
   # TODO: convert to jbuilder.
   def index
     @requirements = @scope.all
-    render json: @requirements
+    render :index
   end
 
   def show
     @requirement = Requirement.find(params[:id])
-    render json: @requirement
+    render :show
   end
+
+  def create
+    @requirement = @scope.create(requirement_params)
+    render :show
+  end
+
+  private
 
   def determine_scope
     if (id = params[:feature_id])
@@ -18,5 +25,9 @@ class RequirementsController < ApplicationController
     else
       @scope = Requirement
     end
+  end
+
+  def requirement_params
+    params.require(:requirement).permit(:text, :feature_id)
   end
 end
