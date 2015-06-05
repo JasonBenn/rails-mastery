@@ -1,14 +1,15 @@
-## Rails Mastery
+## Toolbus
 
-The best way to learn a tool is to build lots of projects with that tool. But when you build 5 apps, are you getting 5 apps worth of experience, or are you getting 1 app worth of experience 5 times?
+The best way to learn your tools is to build lots of things with your tools. But coming up with projects that actually bring you closer to that goal isn't straightforward:
 
-One way to measure mastery of a tool is how well you are familiar with the total API surface area of your tool. To help inspire a variety of projects and accelerate your progress towards stack mastery, this project will show you your progress towards utilizing your entire tool's API surface area. This is especially great for beginners who don't know what to build next! Currently, only Rails is supported. 
+* What if you're a beginner? You don't know what you don't know. Status quo is to haphazardly take on projects and learn solutions to whatever problems you run into - if you run into any.
+* What if you accidentally build the same app 5 times, using the same 20% of your tool's API? Do you really have 5 app's worth of experience, or just 1?
 
-Add all of your Rails repos and see how much you really know about Rails!
+To help inspire variety in projects and accelerate your journey towards stack mastery, this project will show you your progress towards utilizing the entire API surface area of your tools. This is especially great for beginners who don't know what to build next!
 
 ## Contributing
 
-Help building a list of must-know features for any tool would be greatly appreciated! Especially, at the start, for Rails, Node.js, Ember.js, and anything else.
+Help building a list of must-know features for any tool would be greatly appreciated! Especially, at the start, for Rails, Node.js, Ember.js, and anything else. Currently, only Rails is supported.
 
 ## Under the hood
 
