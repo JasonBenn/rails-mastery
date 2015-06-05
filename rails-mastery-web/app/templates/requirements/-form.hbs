@@ -1,0 +1,9 @@
+<form>
+  <h3>Add new requirement</h3>
+  <h3>{{errorMessage}}</h3>
+  <fieldset>
+    {{input value=model.text placeholder="Text of requirement"}}
+    <button {{action 'save'}}>Save</button>
+    <button {{action 'cancel'}}>Cancel</button>
+  </fieldset>
+</form>
