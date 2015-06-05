@@ -1,0 +1,9 @@
+<td>{{requirement.text}}</td>
+<td><input type="text" value={{requirement.text}} placeholder={{requirement.text}}></td>
+<td>
+  {{#if requirement.isSaving}}
+    <p>Saving...</p>
+  {{else if requirement.isDirty}}
+    <button {{action "saveRequirement" requirement}}>Save</button>
+  {{/if}}
+</td>

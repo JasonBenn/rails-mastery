@@ -10,10 +10,7 @@
     </thead>
     <tbody>
       {{#each requirement in model}}
-        <tr>
-          <td>{{requirement.text}}</td>
-          <td></td>
-        </tr>
+        {{requirements/requirement-row requirement=requirement save="save"}}
       {{/each}}
     </tbody>
   </table>
