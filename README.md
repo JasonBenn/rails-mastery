@@ -1,3 +1,5 @@
+# Deprecated in favor of [Toolbus](https://github.com/JasonBenn/toolbus-api).
+
 ## Toolbus
 
 The best way to learn your tools is to build lots of things with your tools. But coming up with projects that actually bring you closer to that goal isn't straightforward:
